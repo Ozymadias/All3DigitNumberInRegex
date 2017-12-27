@@ -26,6 +26,9 @@ public class RegexTest {
     private static final Object[][] inputs() {
         return new Object[][]{
                 {"cdefg 345 12bb23", "345"},
+                {"cdefg 345 12bb23 678tt", "345, 678"},
+                {"cdefg 345 12bb236784tt", "345, 236784"},
+                {"cdefg 345 1223 6784tt", "345, 1223, 6784"}
         };
     }
 
