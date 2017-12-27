@@ -21,4 +21,16 @@ public class RegexTest {
     public void name(String input) {
         assertEquals(Regex.allAtLeast3Digit(input), "");
     }
+
+    @DataProvider
+    private static final Object[][] inputs() {
+        return new Object[][]{
+                {"cdefg 345 12bb23", "345"},
+        };
+    }
+
+    @Test(dataProvider = "inputs")
+    public void name2(String input, String output) {
+        assertEquals(Regex.allAtLeast3Digit(input), output);
+    }
 }
